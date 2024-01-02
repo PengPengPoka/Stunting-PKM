@@ -59,14 +59,8 @@ class PoseDetector():
                     cv2.circle(img,(px,py),3,(255,0,0),cv2.FILLED)
         return lm_list
 
-def measurement(array):
-    euclidean_distance = 0
-    
-    for i in range(len(array)):
-        squared_distance = (array[i][1] - array[i][2]) ** 2
-        euclidean_distance += squared_distance
-
-    euclidean_distance = np.sqrt(euclidean_distance)
+def measurement(array1, array2):
+    euclidean_distance = np.sqrt(((array2[1] - array1[1]) ** 2) + ((array2[2] - array1[2]) ** 2))
 
     return euclidean_distance
 
@@ -177,18 +171,21 @@ def main():
         print("Nothing")
 
     # Height Measurement
-    r_leg = np.array([LMlist[30], LMlist[28], LMlist[26], LMlist[24]])
-    l_leg = np.array([LMlist[29], LMlist[27], LMlist[25], LMlist[23]])
-    leg = (measurement(r_leg) + measurement(l_leg)) / 2
+    print(LMlist[30], LMlist[28], LMlist[26], LMlist[24])
+    print(LMlist[29], LMlist[27], LMlist[25], LMlist[23])
+    r_leg = measurement(LMlist[30], LMlist[28]) + measurement(LMlist[28], LMlist[26]) + measurement(LMlist[26], LMlist[24])
+    l_leg = measurement(LMlist[29], LMlist[27]) + measurement(LMlist[27], LMlist[25]) + measurement(LMlist[25], LMlist[23])
+    leg = (r_leg + l_leg) / 2
     print("LEG: ", leg)
 
-    r_base = np.array([LMlist[24], LMlist[12]])
-    l_base = np.array([LMlist[23], LMlist[11]])
-    base = (measurement(r_base) + measurement(l_base)) / 2
+    r_base = measurement(LMlist[24], LMlist[12])
+    l_base = measurement(LMlist[23], LMlist[11])
+    base = (r_base + l_base) / 2
     print("BASE: ", base)
     
-    arr_head = np.array([(0, neck_x, neck_y), (0, head_x, head_y)])
-    head = measurement(arr_head)
+    arr_neck = np.array([0, neck_x, neck_y])
+    arr_head = np.array([0, head_x, head_y])
+    head = measurement(arr_neck, arr_head)
     print("HEAD: ", head)
 
     total_height = leg + base + head
