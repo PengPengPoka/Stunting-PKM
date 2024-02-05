@@ -77,8 +77,8 @@ def main():
 
     counter = 0
     key_pressed = 0
-    resource_path = "C:/Users/rafae/Documents/Stunting-PKM/resources/"
-    file_name = "foto"+str(counter)+".png"
+    # resource_path = "C:/Users/rafae/Documents/Stunting-PKM/resources/"
+    # file_name = "foto"+str(counter)+".png"
 
     cap = cv2.VideoCapture(0)
     prev_time = 0
@@ -111,7 +111,8 @@ def main():
 
     # Frame to Process
     # frame = cv2.imread(resource_path + file_name)
-    frame = cv2.imread("C:/Users/rafae/OneDrive/Documents/learn_opencv/resources/WIN_20230917_16_46_51_Pro.jpg")
+    frame = cv2.imread("C:\\Users\\OMEN\\Repositories\\Stunting - PKM\\test\\1.jpg")
+    frame = cv2.resize(frame, (640,480))
 
     # Resize to Simplify (not used)
     # if(frame.shape[0] < frame.shape[1]):

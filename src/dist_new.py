@@ -64,6 +64,11 @@ def measurement(array1, array2):
 
     return euclidean_distance
 
+def pixel_per_metric(dimension):
+    constant_length = 4
+    ppm = dimension / constant_length
+    return ppm
+
 def main():
     # Just Def
     first_detector = PoseDetector()
@@ -71,8 +76,8 @@ def main():
 
     counter = 0
     key_pressed = 0
-    resource_path = "C:/Users/rafae/Documents/Stunting-PKM/resources/"
-    file_name = "foto"+str(counter)+".png"
+    # resource_path = "C:/Users/rafae/Documents/Stunting-PKM/resources/"
+    # file_name = "foto"+str(counter)+".png"
 
     cap = cv2.VideoCapture(0)
     prev_time = 0
@@ -105,7 +110,8 @@ def main():
 
     # Frame to Process
     # frame = cv2.imread(resource_path + file_name)
-    frame = cv2.imread("C:/Users/rafae/OneDrive/Documents/learn_opencv/resources/WIN_20230917_16_46_51_Pro.jpg")
+    frame = cv2.imread("C:\\Users\\OMEN\\Repositories\\Stunting - PKM\\test\\3.jpg")
+    # frame = cv2.resize(frame, (640,480))
 
     # Resize to Simplify (not used)
     # if(frame.shape[0] < frame.shape[1]):
@@ -176,6 +182,7 @@ def main():
     r_leg = measurement(LMlist[30], LMlist[28]) + measurement(LMlist[28], LMlist[26]) + measurement(LMlist[26], LMlist[24])
     l_leg = measurement(LMlist[29], LMlist[27]) + measurement(LMlist[27], LMlist[25]) + measurement(LMlist[25], LMlist[23])
     leg = (r_leg + l_leg) / 2
+    interpupillary_dist = measurement(LMlist[2],LMlist[5])
     print("LEG: ", leg)
 
     r_base = measurement(LMlist[24], LMlist[12])
@@ -190,6 +197,16 @@ def main():
 
     total_height = leg + base + head
     print("HEIGHT: ", total_height)
+
+    print("INTERPUPILLARY DISTANCE: ", interpupillary_dist)
+
+    ppm = pixel_per_metric(interpupillary_dist)
+    print("PPM: ", ppm)
+
+    real_height = total_height / ppm
+    print("REAL HEIGHT: {} cm".format(real_height))
+
+
     
     cv2.imshow("result", frame)
 
