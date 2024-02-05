@@ -111,7 +111,7 @@ def main():
 
     # Frame to Process
     # frame = cv2.imread(resource_path + file_name)
-    frame = cv2.imread("D:/Proyek/Stunting/resources/foto0.png")
+    frame = cv2.imread("D:/Proyek/Stunting-PKM/resources/foto0.png")
 
     # Resize to Simplify (not use)
     # if(frame.shape[0] < frame.shape[1]):
