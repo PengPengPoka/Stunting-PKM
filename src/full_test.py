@@ -154,7 +154,7 @@ def main():
 
     counter = 0
     key_pressed = 0
-    resource_path = "D:/Proyek/Stunting-PKM/resources/"
+    resource_path = "/home/rafael/Stunting-PKM/resources/"
     file_name = "foto"+str(counter)+".png"
 
     cap = cv2.VideoCapture(0)
@@ -163,6 +163,7 @@ def main():
     # Camera Processing
     while True:
         ret, frame = cap.read()
+        key = cv2.waitKey(30)
 
         # FPS Calculation
         cur_time = time.time()
@@ -171,16 +172,18 @@ def main():
         cv2.putText(frame,str(int(fps)),(30,50),cv2.FONT_HERSHEY_PLAIN,3,(255,0,0),3)
 
         # Take a Pict
-        if keyboard.is_pressed('p') and key_pressed == 0:
-            key_pressed = 1
+        # if keyboard.is_pressed('p') and key_pressed == 0:
+        if key == 97:
+            # key_pressed = 1
             while os.path.isfile(resource_path + file_name):
                 counter += 1
                 file_name = "foto"+str(counter)+".png"
             cv2.imwrite(os.path.join(resource_path, file_name), frame)
-        elif keyboard.is_pressed('p') == 0:
-            key_pressed = 0
+        # elif keyboard.is_pressed('p') == 0:
+        #     key_pressed = 0
         
-        if keyboard.is_pressed('q'):
+        # if keyboard.is_pressed('q'):
+        if key == 98:
             break
         
         cv2.imshow("video",frame)
