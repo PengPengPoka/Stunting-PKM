@@ -110,7 +110,7 @@ def main():
 
     # Frame to Process
     # frame = cv2.imread(resource_path + file_name)
-    frame = cv2.imread("C:\\Users\\OMEN\\Repositories\\Stunting - PKM\\test\\3.jpg")
+    frame = cv2.imread("D:/Proyek/Stunting-PKM/resources/foto0.png")
     # frame = cv2.resize(frame, (640,480))
 
     # Resize to Simplify (not used)
