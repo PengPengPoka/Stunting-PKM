@@ -180,7 +180,7 @@ def main():
 
     # Frame to Process
     # frame = cv2.imread(resource_path + file_name)
-    frame = cv2.imread("D:/Proyek/Stunting-PKM/resources/foto0.png")
+    frame = cv2.imread("D:/Proyek/Stunting-PKM/test/1.jpg")
     # frame = cv2.resize(frame, (640,480))
 
     # Resize to Simplify (not used)
@@ -237,6 +237,7 @@ def main():
     if face_mesh_results.multi_face_landmarks:
         for face_no, face_landmarks in enumerate(face_mesh_results.multi_face_landmarks):
             pt1 = face_landmarks.landmark[10]
+            print(type(pt1.y))
             head_x = int(pt1.x * frame_temp.shape[1]) + LMlist[12][1]
             head_y = int(pt1.y * frame_temp.shape[0])
             cv2.circle(frame, (head_x, head_y), 3, (255,0,0), -1)
