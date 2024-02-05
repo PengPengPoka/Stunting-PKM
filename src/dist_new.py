@@ -110,7 +110,8 @@ def main():
 
     # Frame to Process
     # frame = cv2.imread(resource_path + file_name)
-    frame = cv2.imread("C:\\Users\\OMEN\\Repositories\\Stunting - PKM\\test\\3.jpg")
+    # frame = cv2.imread("C:\\Users\\OMEN\\OneDrive\\Pictures\\Camera Roll\\test_2.jpg")
+    frame = cv2.imread("C:\\Users\\OMEN\\Repositories\\Stunting - PKM\\test\\6.jpg")
     # frame = cv2.resize(frame, (640,480))
 
     # Resize to Simplify (not used)
@@ -204,7 +205,7 @@ def main():
     print("PPM: ", ppm)
 
     real_height = total_height / ppm
-    print("REAL HEIGHT: {} cm".format(real_height))
+    print("REAL HEIGHT: {:.2f} cm".format(real_height))
 
 
     
