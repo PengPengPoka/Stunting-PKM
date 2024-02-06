@@ -197,7 +197,7 @@ def main():
 
     # Frame to Process
     # frame = cv2.imread(resource_path + file_name)
-    frame = cv2.imread("D:/Proyek/Stunting-PKM/data/test_results/test_" + str(cam_h) + "/test_img.jpg")
+    frame = cv2.imread("/home/rafael/Proyek/Stunting-PKM/data/test_results/test_" + str(cam_h) + "/test_img.jpg")
     # frame = cv2.resize(frame, (640,480))
 
     # Resize to Simplify (not used)
@@ -305,7 +305,7 @@ def main():
     status = p.get_status(th_list)
     print("Status: ", status)
 
-    cv2.imwrite(os.path.join("D:/Proyek/Stunting-PKM/data/test_results/test_" + str(cam_h) + "/", "plus" + str(adder) + ".png"), frame)
+    cv2.imwrite(os.path.join("/home/rafael/Proyek/Stunting-PKM/data/test_results/test_" + str(cam_h) + "/", "plus" + str(adder) + ".png"), frame)
     cv2.imshow("result", frame)
     cv2.waitKey(0)
     cv2.destroyAllWindows
