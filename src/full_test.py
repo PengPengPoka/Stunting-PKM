@@ -142,11 +142,17 @@ def pixel_per_metric_cam(h, center_y, r_y, l_y):
 
 def main():
     # Input Data
-    mode = input("Masukkan mode: ")
-    gender = input("Masukkan jenis kelamin: ")
-    age = input("Masukkan umur: ")
-    if(string.capwords(mode) == "Tinggi"):
-        cam_h = float(input("Masukkan tinggi kamera: "))
+    # mode = input("Masukkan mode: ")
+    # gender = input("Masukkan jenis kelamin: ")
+    # age = input("Masukkan umur: ")
+    # if(string.capwords(mode) == "Tinggi"):
+    #     cam_h = float(input("Masukkan tinggi kamera: "))
+
+    mode = "Panjang"
+    gender = "Laki-laki"
+    age = 2
+    adder = 50
+    cam_h = 102
 
     # Just Def
     first_detector = PoseDetector()
@@ -191,7 +197,7 @@ def main():
 
     # Frame to Process
     # frame = cv2.imread(resource_path + file_name)
-    frame = cv2.imread("/home/rafael/Stunting-PKM/resources/foto2.png")
+    frame = cv2.imread("D:/Proyek/Stunting-PKM/data/test_results/test_" + str(cam_h) + "/test_img.jpg")
     # frame = cv2.resize(frame, (640,480))
 
     # Resize to Simplify (not used)
@@ -249,7 +255,7 @@ def main():
         for face_no, face_landmarks in enumerate(face_mesh_results.multi_face_landmarks):
             pt1 = face_landmarks.landmark[10]
             head_x = int(pt1.x * frame_temp.shape[1]) + LMlist[12][1]
-            head_y = int(pt1.y * frame_temp.shape[0]) - 45
+            head_y = int(pt1.y * frame_temp.shape[0]) - adder
             cv2.circle(frame, (head_x, head_y), 3, (255,0,0), -1)
             neck_x = (int)(((LMlist[11][1]-LMlist[12][1])/2) + LMlist[12][1])
             neck_y = (int)((LMlist[11][2]-LMlist[12][2])/2) + LMlist[12][2]
@@ -298,7 +304,8 @@ def main():
     print("Standar Deviasi: ", th_list)
     status = p.get_status(th_list)
     print("Status: ", status)
-    
+
+    cv2.imwrite(os.path.join("D:/Proyek/Stunting-PKM/data/test_results/test_" + str(cam_h) + "/", "plus" + str(adder) + ".png"), frame)
     cv2.imshow("result", frame)
     cv2.waitKey(0)
     cv2.destroyAllWindows
