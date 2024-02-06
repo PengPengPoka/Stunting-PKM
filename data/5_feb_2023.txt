@@ -1,0 +1,262 @@
+rafael@rafael-Victus-by-HP-Laptop-16-e0xxx:~/Stunting-PKM/src$ python3 full_test.py 
+Masukkan mode: panjang
+Masukkan jenis kelamin: laki-laki
+Masukkan umur: 2
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1707149224.920621    6867 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1707149224.923458    6959 gl_context.cc:344] GL version: 3.2 (OpenGL ES 3.2 Mesa 23.0.4-0ubuntu1~22.04.1), renderer: RENOIR (renoir, LLVM 15.0.7, DRM 3.54, 6.5.0-15-generic)
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+I0000 00:00:1707149224.932774    6867 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1707149224.933872    6973 gl_context.cc:344] GL version: 3.2 (OpenGL ES 3.2 Mesa 23.0.4-0ubuntu1~22.04.1), renderer: RENOIR (renoir, LLVM 15.0.7, DRM 3.54, 6.5.0-15-generic)
+Pose Detected!
+I0000 00:00:1707149241.479991    6867 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1707149241.480808    7029 gl_context.cc:344] GL version: 3.2 (OpenGL ES 3.2 Mesa 23.0.4-0ubuntu1~22.04.1), renderer: RENOIR (renoir, LLVM 15.0.7, DRM 3.54, 6.5.0-15-generic)
+[30, 331, 336] [28, 325, 333] [26, 304, 291] [24, 314, 234]
+[29, 347, 342] [27, 353, 342] [25, 372, 299] [23, 366, 235]
+LEG:  114.41372422952077
+BASE:  111.98876581882226
+HEAD:  132.1854757528224
+HEIGHT:  358.5879658011654
+INTERPUPILLARY DISTANCE:  26.0
+PANJANG
+PPM:  6.5
+REAL HEIGHT: 55.16737935402545 cm
+Penggolongan Panjang Badan Laki-laki (0-24)
+Standar Deviasi:  [51.7856 53.7571 55.772  57.7457 59.7561 61.7086 63.726 ]
+Status:  normal
+rafael@rafael-Victus-by-HP-Laptop-16-e0xxx:~/Stunting-PKM/src$ python3 full_test.py 
+Masukkan mode: panjang
+Masukkan jenis kelamin: laki
+Masukkan umur: ^CTraceback (most recent call last):
+  File "/home/rafael/Stunting-PKM/src/full_test.py", line 307, in <module>
+    main()
+  File "/home/rafael/Stunting-PKM/src/full_test.py", line 147, in main
+    age = input("Masukkan umur: ")
+KeyboardInterrupt
+
+rafael@rafael-Victus-by-HP-Laptop-16-e0xxx:~/Stunting-PKM/src$ python3 full_test.py 
+Masukkan mode: panjang
+Masukkan jenis kelamin: laki-laki
+Masukkan umur: 2
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1707149282.104528    7219 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1707149282.107113    7267 gl_context.cc:344] GL version: 3.2 (OpenGL ES 3.2 Mesa 23.0.4-0ubuntu1~22.04.1), renderer: RENOIR (renoir, LLVM 15.0.7, DRM 3.54, 6.5.0-15-generic)
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+I0000 00:00:1707149282.117883    7219 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1707149282.119234    7281 gl_context.cc:344] GL version: 3.2 (OpenGL ES 3.2 Mesa 23.0.4-0ubuntu1~22.04.1), renderer: RENOIR (renoir, LLVM 15.0.7, DRM 3.54, 6.5.0-15-generic)
+Pose Detected!
+I0000 00:00:1707149289.501486    7219 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1707149289.502517    7337 gl_context.cc:344] GL version: 3.2 (OpenGL ES 3.2 Mesa 23.0.4-0ubuntu1~22.04.1), renderer: RENOIR (renoir, LLVM 15.0.7, DRM 3.54, 6.5.0-15-generic)
+[30, 331, 341] [28, 326, 339] [26, 305, 293] [24, 314, 236]
+[29, 345, 348] [27, 350, 347] [25, 372, 304] [23, 366, 238]
+LEG:  116.66521441544015
+BASE:  111.9824373071533
+HEAD:  133.18408313308313
+HEIGHT:  361.8317348556766
+INTERPUPILLARY DISTANCE:  27.018512172212592
+PANJANG
+PPM:  6.754628043053148
+REAL HEIGHT: 53.567973328717244 cm
+Penggolongan Panjang Badan Laki-laki (0-24)
+Standar Deviasi:  [51.7856 53.7571 55.772  57.7457 59.7561 61.7086 63.726 ]
+Status:  stunted
+rafael@rafael-Victus-by-HP-Laptop-16-e0xxx:~/Stunting-PKM/src$ python3 full_test.py 
+Masukkan mode: panjang
+Masukkan jenis kelamin: laki-laki
+Masukkan umur: 2
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1707149349.772946    7406 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1707149349.775605    7484 gl_context.cc:344] GL version: 3.2 (OpenGL ES 3.2 Mesa 23.0.4-0ubuntu1~22.04.1), renderer: RENOIR (renoir, LLVM 15.0.7, DRM 3.54, 6.5.0-15-generic)
+I0000 00:00:1707149349.784141    7406 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1707149349.785192    7498 gl_context.cc:344] GL version: 3.2 (OpenGL ES 3.2 Mesa 23.0.4-0ubuntu1~22.04.1), renderer: RENOIR (renoir, LLVM 15.0.7, DRM 3.54, 6.5.0-15-generic)
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Pose Detected!
+I0000 00:00:1707149362.004717    7406 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1707149362.005650    7546 gl_context.cc:344] GL version: 3.2 (OpenGL ES 3.2 Mesa 23.0.4-0ubuntu1~22.04.1), renderer: RENOIR (renoir, LLVM 15.0.7, DRM 3.54, 6.5.0-15-generic)
+[30, 333, 345] [28, 328, 341] [26, 308, 293] [24, 315, 238]
+[29, 346, 349] [27, 351, 347] [25, 373, 303] [23, 367, 239]
+LEG:  116.35304218601598
+BASE:  113.83078692483731
+HEAD:  92.43916918709297
+HEIGHT:  322.6229982979463
+INTERPUPILLARY DISTANCE:  27.018512172212592
+PANJANG
+PPM:  6.754628043053148
+REAL HEIGHT: 47.763251542733066 cm
+Penggolongan Panjang Badan Laki-laki (0-24)
+Standar Deviasi:  [51.7856 53.7571 55.772  57.7457 59.7561 61.7086 63.726 ]
+Status:  severely_stunted
+^CTraceback (most recent call last):
+  File "/home/rafael/Stunting-PKM/src/full_test.py", line 307, in <module>
+    main()
+  File "/home/rafael/Stunting-PKM/src/full_test.py", line 303, in main
+    cv2.waitKey(0)
+KeyboardInterrupt
+
+rafael@rafael-Victus-by-HP-Laptop-16-e0xxx:~/Stunting-PKM/src$ python3 full_test.py 
+Masukkan mode: panjang
+Masukkan jenis kelamin: perempuan
+Masukkan umur: 2
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1707149411.507397    7645 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1707149411.510334    7739 gl_context.cc:344] GL version: 3.2 (OpenGL ES 3.2 Mesa 23.0.4-0ubuntu1~22.04.1), renderer: RENOIR (renoir, LLVM 15.0.7, DRM 3.54, 6.5.0-15-generic)
+I0000 00:00:1707149411.518914    7645 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+I0000 00:00:1707149411.519976    7753 gl_context.cc:344] GL version: 3.2 (OpenGL ES 3.2 Mesa 23.0.4-0ubuntu1~22.04.1), renderer: RENOIR (renoir, LLVM 15.0.7, DRM 3.54, 6.5.0-15-generic)
+Pose Detected!
+I0000 00:00:1707149422.640370    7645 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1707149422.641252    7810 gl_context.cc:344] GL version: 3.2 (OpenGL ES 3.2 Mesa 23.0.4-0ubuntu1~22.04.1), renderer: RENOIR (renoir, LLVM 15.0.7, DRM 3.54, 6.5.0-15-generic)
+Nothing
+[30, 332, 342] [28, 327, 339] [26, 308, 293] [24, 315, 238]
+[29, 346, 347] [27, 351, 346] [25, 374, 302] [23, 367, 239]
+LEG:  114.58978368982964
+BASE:  114.37160987996214
+HEAD:  0.0
+HEIGHT:  228.96139356979177
+INTERPUPILLARY DISTANCE:  26.0
+PANJANG
+PPM:  6.5
+REAL HEIGHT: 35.22482977996796 cm
+Penggolongan Panjang Badan Perempuan (0-24)
+Standar Deviasi:  [50.3688 52.3834 54.3895 56.4146 58.4335 60.4707 62.4738]
+Status:  severely_stunted
+rafael@rafael-Victus-by-HP-Laptop-16-e0xxx:~/Stunting-PKM/src$ python3 full_test.py 
+Masukkan mode: panjang
+Masukkan jenis kelamin: laki-laki
+Masukkan umur: 2
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1707149781.362125    7900 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1707149781.365054    7994 gl_context.cc:344] GL version: 3.2 (OpenGL ES 3.2 Mesa 23.0.4-0ubuntu1~22.04.1), renderer: RENOIR (renoir, LLVM 15.0.7, DRM 3.54, 6.5.0-15-generic)
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+I0000 00:00:1707149781.374693    7900 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1707149781.375968    8008 gl_context.cc:344] GL version: 3.2 (OpenGL ES 3.2 Mesa 23.0.4-0ubuntu1~22.04.1), renderer: RENOIR (renoir, LLVM 15.0.7, DRM 3.54, 6.5.0-15-generic)
+Pose Detected!
+I0000 00:00:1707149811.912658    7900 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1707149811.913570    8051 gl_context.cc:344] GL version: 3.2 (OpenGL ES 3.2 Mesa 23.0.4-0ubuntu1~22.04.1), renderer: RENOIR (renoir, LLVM 15.0.7, DRM 3.54, 6.5.0-15-generic)
+[30, 303, 349] [28, 298, 346] [26, 273, 298] [24, 284, 244]
+[29, 313, 354] [27, 319, 352] [25, 343, 303] [23, 335, 245]
+LEG:  117.24787139798673
+BASE:  114.03488435506067
+HEAD:  130.09611831257686
+HEIGHT:  361.37887406562425
+INTERPUPILLARY DISTANCE:  26.076809620810597
+PANJANG
+PPM:  6.519202405202649
+REAL HEIGHT: 55.432988823483356 cm
+Penggolongan Panjang Badan Laki-laki (0-24)
+Standar Deviasi:  [51.7856 53.7571 55.772  57.7457 59.7561 61.7086 63.726 ]
+Status:  normal
+rafael@rafael-Victus-by-HP-Laptop-16-e0xxx:~/Stunting-PKM/src$ python3 full_test.py 
+Masukkan mode: panjang
+Masukkan jenis kelamin: laki-laki
+Masukkan umur: 2
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1707149875.807652    8115 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1707149875.810566    8232 gl_context.cc:344] GL version: 3.2 (OpenGL ES 3.2 Mesa 23.0.4-0ubuntu1~22.04.1), renderer: RENOIR (renoir, LLVM 15.0.7, DRM 3.54, 6.5.0-15-generic)
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+I0000 00:00:1707149875.819561    8115 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1707149875.820807    8246 gl_context.cc:344] GL version: 3.2 (OpenGL ES 3.2 Mesa 23.0.4-0ubuntu1~22.04.1), renderer: RENOIR (renoir, LLVM 15.0.7, DRM 3.54, 6.5.0-15-generic)
+Pose Detected!
+I0000 00:00:1707149885.628961    8115 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1707149885.629904    8308 gl_context.cc:344] GL version: 3.2 (OpenGL ES 3.2 Mesa 23.0.4-0ubuntu1~22.04.1), renderer: RENOIR (renoir, LLVM 15.0.7, DRM 3.54, 6.5.0-15-generic)
+Nothing
+[30, 301, 349] [28, 296, 342] [26, 275, 295] [24, 285, 241]
+[29, 312, 359] [27, 319, 354] [25, 343, 301] [23, 335, 242]
+LEG:  120.66078876378819
+BASE:  110.90175803273031
+HEAD:  0.0
+HEIGHT:  231.56254679651852
+INTERPUPILLARY DISTANCE:  27.018512172212592
+PANJANG
+PPM:  6.754628043053148
+REAL HEIGHT: 34.28205747534402 cm
+Penggolongan Panjang Badan Laki-laki (0-24)
+Standar Deviasi:  [51.7856 53.7571 55.772  57.7457 59.7561 61.7086 63.726 ]
+Status:  severely_stunted
+rafael@rafael-Victus-by-HP-Laptop-16-e0xxx:~/Stunting-PKM/src$ python3 full_test.py 
+Masukkan mode: panjang
+Masukkan jenis kelamin: laki-laki
+Masukkan umur: 2
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1707150034.381673    8401 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1707150034.384542    8474 gl_context.cc:344] GL version: 3.2 (OpenGL ES 3.2 Mesa 23.0.4-0ubuntu1~22.04.1), renderer: RENOIR (renoir, LLVM 15.0.7, DRM 3.54, 6.5.0-15-generic)
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+I0000 00:00:1707150034.395463    8401 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1707150034.396898    8488 gl_context.cc:344] GL version: 3.2 (OpenGL ES 3.2 Mesa 23.0.4-0ubuntu1~22.04.1), renderer: RENOIR (renoir, LLVM 15.0.7, DRM 3.54, 6.5.0-15-generic)
+Pose Detected!
+I0000 00:00:1707150045.752079    8401 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1707150045.752914    8551 gl_context.cc:344] GL version: 3.2 (OpenGL ES 3.2 Mesa 23.0.4-0ubuntu1~22.04.1), renderer: RENOIR (renoir, LLVM 15.0.7, DRM 3.54, 6.5.0-15-generic)
+Nothing
+[30, 300, 333] [28, 295, 326] [26, 275, 275] [24, 286, 227]
+[29, 309, 336] [27, 316, 332] [25, 341, 284] [23, 332, 229]
+LEG:  115.27099570342068
+BASE:  101.54196239019555
+HEAD:  0.0
+HEIGHT:  216.81295809361623
+INTERPUPILLARY DISTANCE:  25.0
+PANJANG
+PPM:  6.25
+REAL HEIGHT: 34.690073294978596 cm
+Penggolongan Panjang Badan Laki-laki (0-24)
+Standar Deviasi:  [51.7856 53.7571 55.772  57.7457 59.7561 61.7086 63.726 ]
+Status:  severely_stunted
+rafael@rafael-Victus-by-HP-Laptop-16-e0xxx:~/Stunting-PKM/src$ python3 full_test.py 
+Masukkan mode: panjang
+Masukkan jenis kelamin: laki-laki
+Masukkan umur: 2 
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1707150060.861142    8587 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1707150060.864036    8653 gl_context.cc:344] GL version: 3.2 (OpenGL ES 3.2 Mesa 23.0.4-0ubuntu1~22.04.1), renderer: RENOIR (renoir, LLVM 15.0.7, DRM 3.54, 6.5.0-15-generic)
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+I0000 00:00:1707150060.872675    8587 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1707150060.873865    8667 gl_context.cc:344] GL version: 3.2 (OpenGL ES 3.2 Mesa 23.0.4-0ubuntu1~22.04.1), renderer: RENOIR (renoir, LLVM 15.0.7, DRM 3.54, 6.5.0-15-generic)
+Pose Detected!
+I0000 00:00:1707150069.162512    8587 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1707150069.163501    8723 gl_context.cc:344] GL version: 3.2 (OpenGL ES 3.2 Mesa 23.0.4-0ubuntu1~22.04.1), renderer: RENOIR (renoir, LLVM 15.0.7, DRM 3.54, 6.5.0-15-generic)
+[30, 299, 329] [28, 295, 323] [26, 275, 277] [24, 285, 229]
+[29, 310, 337] [27, 316, 333] [25, 341, 284] [23, 333, 232]
+LEG:  110.61671425804136
+BASE:  104.48656720669487
+HEAD:  128.191263352851
+HEIGHT:  343.2945448175872
+INTERPUPILLARY DISTANCE:  24.020824298928627
+PANJANG
+PPM:  6.005206074732157
+REAL HEIGHT: 57.16615558990601 cm
+Penggolongan Panjang Badan Laki-laki (0-24)
+Standar Deviasi:  [51.7856 53.7571 55.772  57.7457 59.7561 61.7086 63.726 ]
+Status:  normal
+^[[A^C^C^C^[[A
+Traceback (most recent call last):
+  File "/home/rafael/Stunting-PKM/src/full_test.py", line 307, in <module>
+    main()
+  File "/home/rafael/Stunting-PKM/src/full_test.py", line 303, in main
+    cv2.waitKey(0)
+KeyboardInterrupt
+
+rafael@rafael-Victus-by-HP-Laptop-16-e0xxx:~/Stunting-PKM/src$ python3 full_test.py 
+Masukkan mode: panjang
+Masukkan jenis kelamin: laki-laki
+Masukkan umur: 2
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1707150120.024485    8816 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1707150120.027176    8911 gl_context.cc:344] GL version: 3.2 (OpenGL ES 3.2 Mesa 23.0.4-0ubuntu1~22.04.1), renderer: RENOIR (renoir, LLVM 15.0.7, DRM 3.54, 6.5.0-15-generic)
+I0000 00:00:1707150120.035904    8816 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1707150120.037243    8925 gl_context.cc:344] GL version: 3.2 (OpenGL ES 3.2 Mesa 23.0.4-0ubuntu1~22.04.1), renderer: RENOIR (renoir, LLVM 15.0.7, DRM 3.54, 6.5.0-15-generic)
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Pose Detected!
+I0000 00:00:1707150129.651648    8816 gl_context_egl.cc:85] Successfully initialized EGL. Major : 1 Minor: 5
+I0000 00:00:1707150129.652668    8981 gl_context.cc:344] GL version: 3.2 (OpenGL ES 3.2 Mesa 23.0.4-0ubuntu1~22.04.1), renderer: RENOIR (renoir, LLVM 15.0.7, DRM 3.54, 6.5.0-15-generic)
+[30, 299, 329] [28, 294, 324] [26, 276, 280] [24, 285, 230]
+[29, 310, 339] [27, 315, 334] [25, 338, 287] [23, 332, 233]
+LEG:  109.57167436995049
+BASE:  105.53809193590564
+HEAD:  79.63039620647382
+HEIGHT:  294.7401625123299
+INTERPUPILLARY DISTANCE:  24.0
+PANJANG
+PPM:  6.0
+REAL HEIGHT: 49.12336041872165 cm
+Penggolongan Panjang Badan Laki-laki (0-24)
+Standar Deviasi:  [51.7856 53.7571 55.772  57.7457 59.7561 61.7086 63.726 ]
+Status:  severely_stunted
