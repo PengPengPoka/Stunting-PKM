@@ -160,38 +160,38 @@ def main():
     cap = cv2.VideoCapture(0)
     prev_time = 0
 
-    # Camera Processing
-    while True:
-        ret, frame = cap.read()
-        key = cv2.waitKey(30)
+    # # Camera Processing
+    # while True:
+    #     ret, frame = cap.read()
+    #     key = cv2.waitKey(30)
 
-        # FPS Calculation
-        cur_time = time.time()
-        fps = 1/(cur_time-prev_time)
-        prev_time = cur_time
-        cv2.putText(frame,str(int(fps)),(30,50),cv2.FONT_HERSHEY_PLAIN,3,(255,0,0),3)
+    #     # FPS Calculation
+    #     cur_time = time.time()
+    #     fps = 1/(cur_time-prev_time)
+    #     prev_time = cur_time
+    #     cv2.putText(frame,str(int(fps)),(30,50),cv2.FONT_HERSHEY_PLAIN,3,(255,0,0),3)
 
-        # Take a Pict
-        # if keyboard.is_pressed('p') and key_pressed == 0:
-        if key == 97:
-            # key_pressed = 1
-            while os.path.isfile(resource_path + file_name):
-                counter += 1
-                file_name = "foto"+str(counter)+".png"
-            cv2.imwrite(os.path.join(resource_path, file_name), frame)
-        # elif keyboard.is_pressed('p') == 0:
-        #     key_pressed = 0
+    #     # Take a Pict
+    #     # if keyboard.is_pressed('p') and key_pressed == 0:
+    #     if key == 97:
+    #         # key_pressed = 1
+    #         while os.path.isfile(resource_path + file_name):
+    #             counter += 1
+    #             file_name = "foto"+str(counter)+".png"
+    #         cv2.imwrite(os.path.join(resource_path, file_name), frame)
+    #     # elif keyboard.is_pressed('p') == 0:
+    #     #     key_pressed = 0
         
-        # if keyboard.is_pressed('q'):
-        if key == 98:
-            break
+    #     # if keyboard.is_pressed('q'):
+    #     if key == 98:
+    #         break
         
-        cv2.imshow("video",frame)
-        cv2.waitKey(30)
+    #     cv2.imshow("video",frame)
+    #     cv2.waitKey(30)
 
     # Frame to Process
-    frame = cv2.imread(resource_path + file_name)
-    # frame = cv2.imread("D:/Proyek/Stunting-PKM/test/13.jpg")
+    # frame = cv2.imread(resource_path + file_name)
+    frame = cv2.imread("/home/rafael/Stunting-PKM/resources/foto2.png")
     # frame = cv2.resize(frame, (640,480))
 
     # Resize to Simplify (not used)
@@ -249,7 +249,7 @@ def main():
         for face_no, face_landmarks in enumerate(face_mesh_results.multi_face_landmarks):
             pt1 = face_landmarks.landmark[10]
             head_x = int(pt1.x * frame_temp.shape[1]) + LMlist[12][1]
-            head_y = int(pt1.y * frame_temp.shape[0])
+            head_y = int(pt1.y * frame_temp.shape[0]) - 45
             cv2.circle(frame, (head_x, head_y), 3, (255,0,0), -1)
             neck_x = (int)(((LMlist[11][1]-LMlist[12][1])/2) + LMlist[12][1])
             neck_y = (int)((LMlist[11][2]-LMlist[12][2])/2) + LMlist[12][2]
@@ -290,7 +290,7 @@ def main():
     print("PPM: ", ppm)
 
     real_height = total_height / ppm
-    print("REAL HEIGHT: {} cm".format(real_height))
+    print("REAL HEIGHT: {:.2f} cm".format(real_height))
 
     # Classification
     p = category(mode, age, gender, real_height)
