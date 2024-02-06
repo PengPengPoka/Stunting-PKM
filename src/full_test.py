@@ -151,8 +151,8 @@ def main():
     mode = "Panjang"
     gender = "Laki-laki"
     age = 2
-    adder = 50
-    cam_h = 102
+    adder = 60
+    cam_h = 107
 
     # Just Def
     first_detector = PoseDetector()
