@@ -142,17 +142,17 @@ def pixel_per_metric_cam(h, center_y, r_y, l_y):
 
 def main():
     # Input Data
-    # mode = input("Masukkan mode: ")
-    # gender = input("Masukkan jenis kelamin: ")
-    # age = input("Masukkan umur: ")
-    # if(string.capwords(mode) == "Tinggi"):
-    #     cam_h = float(input("Masukkan tinggi kamera: "))
+    mode = input("Masukkan mode: ")
+    gender = input("Masukkan jenis kelamin: ")
+    age = input("Masukkan umur: ")
+    if(string.capwords(mode) == "Tinggi"):
+        cam_h = float(input("Masukkan tinggi kamera: "))
 
-    mode = "Panjang"
-    gender = "Laki-laki"
-    age = 2
-    adder = 60
-    cam_h = 107
+    # mode = "Panjang"
+    # gender = "Laki-laki"
+    # age = 2
+    adder = 0
+    # cam_h = 107
 
     # Just Def
     first_detector = PoseDetector()
@@ -160,44 +160,44 @@ def main():
 
     counter = 0
     key_pressed = 0
-    resource_path = "/home/rafael/Stunting-PKM/resources/"
+    resource_path = "C:/Users/rafae/OneDrive - UGM 365/PKM/Stunting-PKM/resources/"
     file_name = "foto"+str(counter)+".png"
 
     cap = cv2.VideoCapture(0)
     prev_time = 0
 
-    # # Camera Processing
-    # while True:
-    #     ret, frame = cap.read()
-    #     key = cv2.waitKey(30)
+    # Camera Processing
+    while True:
+        ret, frame = cap.read()
+        key = cv2.waitKey(30)
 
-    #     # FPS Calculation
-    #     cur_time = time.time()
-    #     fps = 1/(cur_time-prev_time)
-    #     prev_time = cur_time
-    #     cv2.putText(frame,str(int(fps)),(30,50),cv2.FONT_HERSHEY_PLAIN,3,(255,0,0),3)
+        # FPS Calculation
+        cur_time = time.time()
+        fps = 1/(cur_time-prev_time)
+        prev_time = cur_time
+        cv2.putText(frame,str(int(fps)),(30,50),cv2.FONT_HERSHEY_PLAIN,3,(255,0,0),3)
 
-    #     # Take a Pict
-    #     # if keyboard.is_pressed('p') and key_pressed == 0:
-    #     if key == 97:
-    #         # key_pressed = 1
-    #         while os.path.isfile(resource_path + file_name):
-    #             counter += 1
-    #             file_name = "foto"+str(counter)+".png"
-    #         cv2.imwrite(os.path.join(resource_path, file_name), frame)
-    #     # elif keyboard.is_pressed('p') == 0:
-    #     #     key_pressed = 0
+        # Take a Pict
+        # if keyboard.is_pressed('p') and key_pressed == 0:
+        if key == 97:
+            # key_pressed = 1
+            while os.path.isfile(resource_path + file_name):
+                counter += 1
+                file_name = "foto"+str(counter)+".png"
+            cv2.imwrite(os.path.join(resource_path, file_name), frame)
+        # elif keyboard.is_pressed('p') == 0:
+        #     key_pressed = 0
         
-    #     # if keyboard.is_pressed('q'):
-    #     if key == 98:
-    #         break
+        # if keyboard.is_pressed('q'):
+        if key == 98:
+            break
         
-    #     cv2.imshow("video",frame)
-    #     cv2.waitKey(30)
+        cv2.imshow("video",frame)
+        cv2.waitKey(30)
 
     # Frame to Process
-    # frame = cv2.imread(resource_path + file_name)
-    frame = cv2.imread("/home/rafael/Proyek/Stunting-PKM/data/test_results/test_" + str(cam_h) + "/test_img.jpg")
+    frame = cv2.imread(resource_path + file_name)
+    # frame = cv2.imread("/home/rafael/Proyek/Stunting-PKM/data/test_results/test_" + str(cam_h) + "/test_img.jpg")
     # frame = cv2.resize(frame, (640,480))
 
     # Resize to Simplify (not used)
@@ -293,6 +293,7 @@ def main():
     elif(string.capwords(mode) == "Tinggi"):
         print("TINGGI")
         ppm = pixel_per_metric_cam(cam_h, frame.shape[0]/2, LMlist[30][2], LMlist[29][2])
+        ppm = 417/181
     print("PPM: ", ppm)
 
     real_height = total_height / ppm
